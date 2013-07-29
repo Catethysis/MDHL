@@ -1,0 +1,66 @@
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style>
+		body {
+			background: url('bcgnd.png') repeat #222;
+		}
+
+		.wrap {
+			width: 700px;
+			margin: 0 auto;
+			border: 3px solid #970;
+			box-shadow: 0 0 10px #640;
+		}
+
+		.text_wrap {
+			background-color: #252a2a;
+			padding: 1 30 100 30;
+			color: #d7d7d7;
+			font-family: Segoe UI;
+		}
+		.h2 { margin-top: 10px; }
+		.code {
+			background-color: #000;
+			padding: 0 5 0 5;
+		}
+
+		.tag { color: #8abbea; }
+		.style { color: #9ff25a; }
+		.comment { color: #797979; }
+		.link { color: #a7cbcf; }
+	</style>
+</head>
+
+<body>
+<div class="wrap">
+	<div class="text_wrap">
+		<h3>Обработка тегов подсветки синтаксиса</h3>
+
+		Для обработки моего Markdown-текста, <span class="link">Jekyll использует Liquid</span>. Синтаксис следующий:
+
+		<div class="code"><pre><code>
+{ % highlight lang (linenos)? % }
+// code...
+{ % endhighlight % }
+		</code></pre></div>
+
+		Для начала, конечно, сниппет:
+		<div class="code"><pre><code>
+<span class="tag">&lt;snippet&gt;
+    &lt;content&gt;</span><span class="style">&lt;![CDATA[
+{ % highlight ${1:python} ${2}% }
+${3}
+{ % endhighlight % }
+]]&gt;</span><span class="tag">&lt;/content&gt;</span>
+    <span class="comment">&lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&gt;</span>
+    <span class="tag">&lt;tabTrigger&gt;</span>highlight<span class="tag">&lt;/tabTrigger&gt;</span>
+    <span class="comment">&lt;!-- Optional: Set a scope to limit where the snippet will trigger --&gt;
+    &lt;!-- &lt;scope&gt;source.markdown&lt;/scope&gt; --&gt;</span>
+<span class="tag">&lt;/snippet&gt;</span>
+		</code></pre></div>
+
+		А теперь о том, как просматривать написанный Markdown-текст. Джеффри советует воспользоваться программой <span class="link">Marked</span>. Она очень удобная, красивая, поддерживает различные варианты отображения текста и т.п. Но одно она точно не определяет - теги подсветки синтаксиса, упомянутые выше.
+
+	</div>
+</div>
+</body>
